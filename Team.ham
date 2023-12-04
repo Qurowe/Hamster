@@ -1,0 +1,137 @@
+/*class*/class RotesTeam extends Team
+{
+
+   public RotesTeam ()
+   {
+     posEinsX = 16;
+     posEinsY = 9;
+     
+     posZweiX = 16;
+     posZweiY = 8;
+     
+     posDreiX = 15;
+     posDreiY = 9;
+     
+     posVierX = 15;
+     posVierY = 8;     
+     super (Hamster.ROT);   
+   }
+}
+
+class BlauesTeam extends Team
+{
+
+   public BlauesTeam ()
+   {
+     posEinsX = 4;
+     posEinsY = 17;
+     
+     posZweiX = 4;
+     posZweiY = 18;
+     
+     posDreiX = 5;
+     posDreiY = 18;
+     
+     posVierX = 5;
+     posVierY = 17; 
+     super (Hamster.BLAU);       
+   }
+}
+
+class GruenesTeam extends Team
+{
+
+   public GruenesTeam ()
+   {
+     posEinsX = 6;
+     posEinsY = 7;
+     
+     posZweiX = 5;
+     posZweiY = 7;
+     
+     posDreiX = 6;
+     posDreiY = 8;
+     
+     posVierX = 5;
+     posVierY = 8;
+     super (Hamster.GRUEN);        
+   }
+}
+
+class GelbTeam extends Team
+{
+
+   public GelbTeam ()
+   {
+     posEinsX = 14;
+     posEinsY = 19;
+     
+     posZweiX = 15;
+     posZweiY = 19;
+     
+     posDreiX = 15;
+     posDreiY = 18;
+     
+     posVierX = 14;
+     posVierY = 18;
+     super (Hamster.GELB);       
+   }
+}
+
+class Team 
+{
+
+  int posEinsX = 0;
+  int posEinsY = 0;
+  KlasseFigur1 eins ;
+
+  int posZweiX = 0;
+  int posZweiY = 0;
+  KlasseFigur2 zwei ;
+  
+  int posDreiX = 0;
+  int posDreiY = 0;
+  KlasseFigur3 drei ;
+  
+  int posVierX = 0;
+  int posVierY = 0;
+  KlasseFigur4 vier ;
+
+  public Team (int farbe)
+  {
+    eins = new KlasseFigur1 ();
+    eins.init (posEinsX,posEinsY,Hamster.OST,0);
+    
+    zwei = new KlasseFigur2 ();
+    zwei.init (posZweiX,posZweiY,Hamster.OST,0);
+    
+    drei = new KlasseFigur3 ();
+    drei.init (posDreiX,posDreiY,Hamster.WEST,0);
+    
+    vier = new KlasseFigur4 ();
+    vier.init (posVierX,posVierY,Hamster.WEST,0);
+  }
+
+//  if (korn == 10)
+//  {
+    
+//    break 
+    
+//  }
+//  else 
+//  {
+  
+  
+//  }
+//  
+      
+}
+
+// Falls der Hamster ein Korn aufhebt muss er zurück melden wie das er ein Korn aufgehoben hat und dan zählt das Team hoch 
+
+
+// Hier müssen alle algemeinen sachen geprüft werden 
+
+
+// für NPC gesteuert ansatz das sich immer der vorderste hamster bewegt 
+// für Player gesteuerten Hamster ansatz das sich der Bewegt den Player auswählt 

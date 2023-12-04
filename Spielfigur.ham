@@ -1,0 +1,133 @@
+/*class*/class Spielfigur extends Hamster {
+
+	private Hamster
+	hamster;
+	
+		public Figur()
+{
+	this.hamster = new
+Hamster();
+    
+}
+	public boolean istBewegungMoeglich (int schritte)
+	{
+		//Überprüft ob der Hamster sich um die angegebene Anzahl von Schritten vorwärts bewegen kann
+		
+	if (kannVorwaertsGehen())
+	{
+		return true;
+		}else{
+		return false;
+		}
+	}
+
+
+
+boolean kannVorwaertsGehen()
+{	
+	if (vornFrei())
+	{
+		return true;
+		}else{
+		return false;
+		}
+	}
+	
+//Klasse figuren, mit kollisionsprüfer
+//Spielfiguren-Objekte Spielfigur:
+public class Spielfigur{
+	String farbe;
+	public int position;
+	String status;
+	
+	// Konstruktor
+	public Spielfigur(String farbe){
+	this.farbe= farbe;
+	this.position = 0;
+//Startposition
+	this.status = "Im Haus"; //Anfangsstatus
+}
+//Methode zum Bewegen der Figur; Ändern des Status usw.
+
+
+//Spielfiguren-Objekte andereFigur:
+public class andereFigur{
+	String farbe;
+	public int position;
+	String status;
+	
+	// Konstruktor
+	public andereFigur(String farbe){
+	this.farbe= farbe;
+	this.position = 0;
+//Startposition
+	this.status = "Im Haus"; //Anfangsstatus
+}
+//Methode zum Bewegen der Figur; Ändern des Status usw.
+
+
+
+
+/**
+
+//Kann am Ende Gelöscht werden, kollisionPruefengleicheUndFarbe hat alles inklusive. das dient nur als sicherheit
+public void kollisionPruefen(Spielfigur andereSpielfigur)
+{
+	if (this.position == andereSpielfigur.position) {
+	
+	andereSpielfigur.position = 0;
+	//Die andere Figur wird zurück ins Haus geschickt
+		andereSpielfigur.status
+	= "im Haus";
+	}
+}
+}
+//Ende
+
+public void kollisionPruefengleicheUndFarbe(Spielfigur andereSpielfigur)
+{
+	if (this.position == andereSpielfigur.position) {
+		//überfrüfen, ob die Figuren die gleiche Farbe haben
+	if (this.farbe.equals(andereSpielfigur.farbe))
+	{System.out.println("Zug nicht möglich. Bitte wählen Sie eine andere Figur");
+	this.position -= gewuerfelteZahl;
+		//Der Hamster geht zurück auf sein ursprüngliches Feld
+		}else{
+	andereSpielfigur.position = 0;
+		//Die andere Figur wird zurück ins Haus geschickt
+	andereSpielfigur.status = "im Haus";
+		}
+	}
+}
+
+}
+
+*/
+
+//Dreht sich um
+	
+void kehrt()
+{
+	linksUm(2);
+}
+
+//Dreht sich nach links
+
+void linksUm(int schritte)
+{
+	int linksUm = 0;
+	while (linksUm < schritte)
+	{
+		linksUm();
+		linksUm++;
+	}
+}
+
+//Dreht sich nach rechts
+	
+void rechtsUm()
+{
+	linksUm(3);
+}
+
+}
